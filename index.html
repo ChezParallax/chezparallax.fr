@@ -1,80 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
   <head>
-    <!-- 🧠 MÉTA-INFOS SEO -->
+    <!-- ===== META ===== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Choisissez votre destination : Community Management ou Automatisation & IA." />
-    <meta name="author" content="Parallax" />
+    <meta name="description" content="Choisissez votre accélérateur : Community Management ou Automatisation & IA." />
+    <title>Parallax · Deux expertises pour faire grandir votre business</title>
 
-    <!-- 🪧 META SOCIAL -->
-    <meta property="og:title" content="Chez Parallax" />
-    <meta property="og:description" content="Choisissez votre destination : Community Management ou Automatisation & IA." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://chezparallax.fr" />
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet" />
 
-    <!-- 🔍 FAVICON -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-    <!-- 🧠 TITRE -->
-    <title>Chez Parallax</title>
-
-    <!-- 💻 POLICES -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet" />
-
-    <!-- TAILWIND (toujours en premier) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- STYLES CUSTOM -->
+    <!-- DaisyUI (facultatif pour btn classes) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/daisyui@4"></script>
+
+    <!-- Icônes Lucide -->
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Critical / Non‑critical JS -->
+    <script defer src="/js/main-critical.js"></script>
+    <script type="module" defer src="/js/main-noncritical.js"></script>
+
     <style>
-      body {
-        font-family: 'Nunito', sans-serif;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: 'Montserrat', sans-serif;
-      }
+      /* Polices */
+      body { font-family: "Nunito", sans-serif; }
+      h1, h2, h3, h4 { font-family: "Montserrat", sans-serif; }
+      .font-mont { font-family: "Montserrat", sans-serif; }
     </style>
+
+    <link rel="icon" href="/favicon.ico" />
   </head>
 
   <body class="bg-[#f5f1e6] text-[#25353f] min-h-screen flex flex-col">
-    <!-- 🌍 CONTENU PRINCIPAL -->
-    <main class="flex flex-1 items-center justify-center px-6 py-16">
-      <div class="text-center max-w-xl">
-        <h1 class="text-4xl lg:text-5xl font-extrabold mb-8 leading-tight">
-          Bienvenue chez <span class="text-[#c78a5c]">Parallax</span>
-        </h1>
-        <p class="text-lg mb-12 font-nunito">
-          Choisissez votre destination&nbsp;:
-        </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <!-- Bouton Community Management -->
-          <a
-            href="https://start.chezparallax.fr"
-            class="flex-1 inline-block bg-[#c78a5c] hover:bg-[#7ea1c4] transition-all duration-200 ease-in-out text-white font-semibold py-4 px-8 rounded-lg text-lg shadow hover:scale-[1.04] active:scale-[0.97]"
-            >Community&nbsp;Management</a
-          >
+    <!-- ========= HEADER ========= -->
+    <header id="header" class="sticky top-0 z-50"></header>
 
-          <!-- Bouton Automatisation & IA -->
-          <a
-            href="https://octomate.chezparallax.fr"
-            class="flex-1 inline-block bg-[#7ea1c4] hover:bg-[#c78a5c] transition-all duration-200 ease-in-out text-white font-semibold py-4 px-8 rounded-lg text-lg shadow hover:scale-[1.04] active:scale-[0.97]"
-            >Automatisation&nbsp;&amp;&nbsp;IA</a
-          >
-        </div>
-      </div>
+    <!-- ========= HERO ========= -->
+    <main class="flex flex-col flex-1">
+      <section id="intro" class="text-center px-6 lg:px-10 py-14">
+        <h1 class="text-4xl lg:text-5xl font-extrabold font-mont mb-6">
+          Accélérez votre croissance :<br>
+          <span class="text-[#c78a5c]">marketing humain</span> & <span class="text-[#7ea1c4]">automatisations intelligentes</span>
+        </h1>
+        <p class="text-lg lg:text-xl max-w-2xl mx-auto">
+          Sélectionnez le levier qui répond à vos priorités :<br>
+          visibilité & clients, ou productivité & ROI.
+        </p>
+      </section>
+
+      <!-- ====== SPLIT ====== -->
+      <section class="grid lg:grid-cols-2 flex-1">
+        <!-- Community -->
+        <a href="https://start.chezparallax.fr"
+           class="choice-card relative flex flex-col items-center justify-center gap-8 bg-[#c78a5c] text-[#25353f] p-12 hover:shadow-2xl transition">
+          <div class="text-center z-10">
+            <h2 class="text-3xl font-extrabold font-mont mb-4">
+              Community Management
+            </h2>
+            <p class="max-w-md mx-auto mb-8 text-base lg:text-lg font-nunito">
+              Faites de vos réseaux sociaux <span class="font-bold">un moteur de clients et de visibilité</span>
+              grâce à une stratégie créative, sur-mesure et 100 % déléguée.
+            </p>
+
+            <!-- Attractive button -->
+            <span class="inline-block px-10 py-3 rounded-full bg-[#f5f1e6] text-[#25353f] font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform active:translate-y-0">
+              Découvrir
+            </span>
+          </div>
+          <i data-lucide="messages-square" class="absolute bottom-6 right-6 w-10 h-10 text-[#f5f1e6]/30"></i>
+        </a>
+
+        <!-- OctoMate -->
+        <a href="https://octomate.chezparallax.fr"
+           class="choice-card relative flex flex-col items-center justify-center gap-8 bg-[#25353f] text-[#f5f1e6] p-12 hover:shadow-2xl transition">
+          <div class="text-center z-10">
+          <h2 class="text-3xl font-extrabold font-mont mb-4">
+            Automatisation & IA
+          </h2>
+          <p class="max-w-md mx-auto mb-8 text-base lg:text-lg font-nunito">
+            Automatisez vos process pour <span class="font-bold">gagner plusieurs heures par semaine</span>,
+            réduire les erreurs et accélérer la prise de décision grâce à l’IA.
+          </p>
+            <span class="inline-block px-10 py-3 rounded-full bg-[#7ea1c4] text-[#25353f] font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform active:translate-y-0">
+              Découvrir
+            </span>
+          </div>
+          <i data-lucide="bot" class="absolute bottom-6 right-6 w-10 h-10 text-[#7ea1c4]/30"></i>
+        </a>
+      </section>
     </main>
 
-    <!-- 🡦 FOOTER MINIMAL -->
-    <footer class="py-6 text-center text-sm text-[#4a4a4a] bg-[#f5f1e6]">
-      © <span id="year"></span> Parallax. Tous droits réservés.
-    </footer>
+    <!-- ===== CTA ===== -->
+    <section class="bg-[#7ea1c4] text-[#25353f] text-center py-12 px-6">
+      <h3 class="text-2xl font-extrabold font-mont mb-3">
+        Besoin d’un œil expert ?
+      </h3>
+      <p class="mb-8 max-w-xl mx-auto">
+        Parlons-en <span class="font-bold">30 min en visio</span> – c’est offert et sans engagement.
+      </p>
 
-    <!-- JS YEAR AUTO -->
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      <a
+        data-cal-link="thibaud-chezparallax/decouverte-parallax"
+        data-cal-namespace="decouverte-parallax"
+        data-cal-config='{"layout":"month_view"}'
+        class="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-[#25353f] text-[#f5f1e6] font-semibold shadow-md
+              hover:bg-[#c78a5c] hover:text-white hover:shadow-xl transition hover:-translate-y-[2px] active:translate-y-0">
+        Réserver mon audit offert
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </section>
+
+    <!-- ========= FOOTER ========= -->
+    <footer id="footer"></footer>
+    <script type="text/javascript">
+      (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let cal = C.Cal; let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {}; cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () { p(api, arguments); };
+            const ns = ar[1];
+            api.q = api.q || [];
+            if (typeof ns === "string") {
+              cal.ns[ns] = cal.ns[ns] || api;
+              p(cal.ns[ns], ar);
+              p(cal, ["initNamespace", ns]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "decouverte-parallax", {origin:"https://app.cal.com"});
+      Cal.ns["decouverte-parallax"]("ui", {
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#25353F" },
+          dark:  { "cal-brand": "#F5F1E6" }
+        },
+        layout: "month_view"
+      });
     </script>
   </body>
 </html>
