@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <!-- 🧠 MÉTA-INFOS SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Choisissez votre destination : Community Management ou Automatisation & IA." />
+    <meta name="author" content="Parallax" />
+
+    <!-- 🪧 META SOCIAL -->
+    <meta property="og:title" content="Chez Parallax" />
+    <meta property="og:description" content="Choisissez votre destination : Community Management ou Automatisation & IA." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chezparallax.fr" />
+
+    <!-- 🔍 FAVICON -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- 🧠 TITRE -->
+    <title>Chez Parallax</title>
+
+    <!-- 💻 POLICES -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet" />
+
+    <!-- TAILWIND (toujours en premier) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- STYLES CUSTOM -->
+    <style>
+      body {
+        font-family: 'Nunito', sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Montserrat', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#f5f1e6] text-[#25353f] min-h-screen flex flex-col">
+    <!-- 🌍 CONTENU PRINCIPAL -->
+    <main class="flex flex-1 items-center justify-center px-6 py-16">
+      <div class="text-center max-w-xl">
+        <h1 class="text-4xl lg:text-5xl font-extrabold mb-8 leading-tight">
+          Bienvenue chez <span class="text-[#c78a5c]">Parallax</span>
+        </h1>
+        <p class="text-lg mb-12 font-nunito">
+          Choisissez votre destination&nbsp;:
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <!-- Bouton Community Management -->
+          <a
+            href="https://start.chezparallax.fr"
+            class="flex-1 inline-block bg-[#c78a5c] hover:bg-[#7ea1c4] transition-all duration-200 ease-in-out text-white font-semibold py-4 px-8 rounded-lg text-lg shadow hover:scale-[1.04] active:scale-[0.97]"
+            >Community&nbsp;Management</a
+          >
+
+          <!-- Bouton Automatisation & IA -->
+          <a
+            href="https://octomate.chezparallax.fr"
+            class="flex-1 inline-block bg-[#7ea1c4] hover:bg-[#c78a5c] transition-all duration-200 ease-in-out text-white font-semibold py-4 px-8 rounded-lg text-lg shadow hover:scale-[1.04] active:scale-[0.97]"
+            >Automatisation&nbsp;&amp;&nbsp;IA</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- 🡦 FOOTER MINIMAL -->
+    <footer class="py-6 text-center text-sm text-[#4a4a4a] bg-[#f5f1e6]">
+      © <span id="year"></span> Parallax. Tous droits réservés.
+    </footer>
+
+    <!-- JS YEAR AUTO -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
